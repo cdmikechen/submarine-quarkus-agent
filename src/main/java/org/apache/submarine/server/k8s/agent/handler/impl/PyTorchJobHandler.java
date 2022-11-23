@@ -26,6 +26,11 @@ public class PyTorchJobHandler implements ModelHandler {
     }
 
     @Override
+    public String resourceLabel() {
+        return "submarine-experiment-name";
+    }
+
+    @Override
     public Watcher watcher() {
         return watcher;
     }

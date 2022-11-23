@@ -10,6 +10,8 @@ public interface ModelHandler<T extends CustomResource> {
 
     Class<T> resourceClass();
 
+    String resourceLabel();
+
     Watcher watcher();
 
 }

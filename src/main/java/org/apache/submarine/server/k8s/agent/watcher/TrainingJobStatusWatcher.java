@@ -59,7 +59,7 @@ public class TrainingJobStatusWatcher implements Watcher {
         // finish agent
         if (FINISHED_TYPES.contains(type)) {
             LOGGER.infov("finish job ...");
-            System.exit(-1);
+            System.exit(0);
         }
     }
 

@@ -40,7 +40,7 @@ public class SubmarineAgentListener {
             MixedOperation<?, KubernetesResourceList<?>, Resource<?>> resource = client.resources(handler.resourceClass());
             // list option
             var listOption = new ListOptionsBuilder()
-                    .withLabelSelector(String.format("submarine-experiment-name=%s", config.resourceName()))
+                    .withLabelSelector(String.format("%s=%s", handler.resourceLabel(), config.resourceName()))
                     .withFieldSelector(String.format("metadata.name=%s", config.resourceId()))
                     .build();
             // check namespace
